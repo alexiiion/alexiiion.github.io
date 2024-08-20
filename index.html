@@ -1,5 +1,279 @@
-<!DOCTYPE html>
-<body>
-Hello World
-<!body>
-<!html>
+---
+layout: page
+image: banner-photo--gray.jpg
+---
+
+<!-- <h1 class="teaser__title">hello, I am <em>alex.</em></h1> -->
+
+
+<br>
+<!-- <p class="no-space-after"> -->
+<p>
+	I am the Sara Kiesler Assistant Professor at the <a href="https://hcii.cmu.edu/">Human-Computer Interaction Institute</a> at Carnegie Mellon University's <a href="https://www.cs.cmu.edu/">School of Computer Science</a>. 
+	I lead the <a href="https://interactive-structures.org" class="underlined_link">Interactive Structures Lab</a>, where we investigate and develop interactive design tools that enable digital fabrication of complex structures for novice users.
+</p>
+<p class="centered font-large">
+	<span class="highlight_text">
+	You are most likely looking for my 
+	<a class="link_button" target="_blank" href="{{site.assetsurl}}Curriculum-Vitae_Alexandra-Ion.pdf">
+		<ion-icon name="link-sharp"></ion-icon>
+		&nbsp;LAB WEBSITE
+	</a>
+	</span>
+	<br><br>
+</p>
+
+<h3><strong>HCI</strong> + computational geometry + engineering + design</h3>
+<p>
+	Interactive structures <strong>embed functionality</strong> within their geometry such that they can react to <strong>simple input</strong> with <strong>complex behavior</strong>. Such structures enable materials that can, e.g., embed robotic movement, can perform computations, or communicate with users. 
+	We focus on material discovery by <strong>broadening participation</strong>. We develop optimization-based <strong>interactive design tools</strong> that enable novices to contribute their creativity and experts to apply their intuition in order to foster the advancement of high-tech materials. We investigate the entire pipeline, i.e., their mechanical <em>structure</em>, the <em>algorithms</em> for efficient design, the unforeseen <em>application</em> areas and <em>fabrication</em> methods. 
+</p>
+<p>
+	We are always open for ambitious and interested students <a href="https://interactive-structures.org/join.html" class="underlined_link">join the team!</a>
+</p>
+
+
+
+
+<!-- ################################################ -->
+<h3 id="contact">Contact</h3>
+
+<div class="row" style="text-align: left;">
+	<div class="col-6">	
+		<p>
+			<strong>Address: </strong> <br>
+			<a href="https://goo.gl/maps/ReBthB6XpuqcEX6x6">
+				407 S Craig St, Room 202 <br>
+				Pittsburgh, PA 15213, USA <br>
+			</a>
+		</p>
+		<p>	
+			<strong>email:</strong>
+			<a href="mailto:{{ 'alexandraion@cmu.edu' | encode_email }}"> alexandraion(a)cmu.edu </a>
+			<!-- <br> -->
+		</p>
+	</div>
+	<div class="col-6 contact">
+		<!-- <strong>Online:</strong>  -->
+		<br>
+		<ul class="contact__list list-reset">
+			<li><a href="{{ site.data.settings.twitter }}"><ion-icon name="logo-twitter"></ion-icon>twitter</a></li>
+			<li><a href="{{ site.data.settings.scholar }}"><ion-icon name="school-sharp"></ion-icon>Google Scholar</a> </li>
+		</ul>
+		<!-- <a href="#">Linkedin</a> <br> -->
+		<span style="height: 16px; display: block;">&nbsp;</span>
+		<a class="link_button" target="_blank" href="{{site.assetsurl}}Curriculum-Vitae_Alexandra-Ion.pdf">
+			<ion-icon name="download-sharp"></ion-icon>
+				&nbsp;Curriculum Vitae
+			</a>
+		<!-- <a class="link_button" target="_blank" rel="noopener noreferrer"
+		href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/17mML2rdbHIYjW1cs71TRwHvUuq6Ly0JGXlwMy01CiWo/export?format=pdf">
+		<ion-icon name="download-sharp"></ion-icon>
+			&nbsp;Curriculum Vitae
+		</a> -->
+	</div>
+</div>
+
+
+
+<!-- ################################################ -->
+<h2>Selected Publications</h2>
+
+<p>
+	All publications are updated on our <a href="https://interactive-structures.org" class="underlined_link">lab website</a> or on <a href="{{ site.data.settings.scholar }}">Google Scholar</a>. Please find them there!
+	<br>
+	One nugget -- find my PhD thesis here: <a href="https://publishup.uni-potsdam.de/frontdoor/index/index/docId/42986">Metamaterial Devices</a>
+	<!-- My work is currently exhibited at the Ars Electronica Center -->
+</p>
+
+{% if site.publications.size > 0 %}
+{% assign publications = site.publications | sort: "publication-date" | reverse %}
+
+<div class="row">
+	{% for pub in publications limit:4 %}
+		<div class="col-3 col-t-6 col-m-12" style="padding-right: 10px; padding-bottom: 20px; text-align: left;">	
+			<iframe  width="320" height="180" allowfullscreen frameborder="0" scrolling="no" 
+			src="{% include article/get-video-url.html link=pub.video-thumb embed=true %}"></iframe>
+			
+			<span style="height: 8px; display: block;">&nbsp;</span>
+
+			{% assign project-page = pub.url | prepend: "https://interactive-structures.org" %}
+			{% if pub.external-page %}
+				{% assign project-page = pub.external-page %}
+			{% endif %}
+			<h4 class="article__title no-space-after">
+				<a class="invisible_link" href="{{ project-page }}">{{ pub.title }}</a>
+			</h4>
+			
+			<p class="tight">
+				{{ pub.venue }} <br/>
+			</p>
+			
+		</div>
+	{% endfor %}
+</div>
+
+{% endif %}
+
+
+
+<!-- ################################################ -->
+<h2 id="academic_service">Academic Service</h2>
+
+<div class="row" style="text-align: left;">
+	<div class="col-3 col-m-12">	
+		<strong>Program committee chairing:	</strong>
+	</div>
+	<div class="col-9 col-m-12">   
+		<ul class="no_bullet">
+			<li> ACM UIST 2024 program co-chair </li>
+			<li> ACM CHI 2024 subcommittee co-chair “Building Devices” </li>
+			<li> ACM SIGGRAPH 2024 Poster chair </li>
+			<li> ACM CHI 2023 subcommittee co-chair “Building Devices” </li>
+		</ul>
+		<br> 
+	</div>
+
+	<div class="col-3 col-m-12">	
+		<strong>Program committee member:	</strong>
+	</div>
+	<div class="col-9 col-m-12">		
+		<ul class="no_bullet">
+			<li> ACM UIST 2021, 2020 </li>
+			<li> ACM CHI 2021, 2020, 2019  </li>
+			<li> ACM SIGGRAPH 2021 – Posters committee </li>
+			<li> ACM SIGGRAPH Asia 2019 – Technical briefs and posters </li>
+			<li> Graphics Interface 2020 </li>
+		</ul>
+
+		<br> 
+	</div>
+</div>
+
+<div class="row" style="text-align: left;">
+	<div class="col-3 col-m-12">	
+		<strong>Organizing committee:	</strong>
+	</div>
+	<div class="col-9 col-m-12">
+		<ul class="no_bullet">
+			<li> ACM SIGGRAPH 2023 – Student Research Competition chair </li>
+			<li> ACM UIST 2022, 2023 – Doctoral Symposium co-chair </li>
+			<li> ACM UIST 2020, 2021 – demonstrations co-chair </li>
+			<li> ACM UIST 2019 – sustainability co-chair </li>
+			<li> ACM UIST 2018 – local arrangements co-chair, accessibility chair </li>
+			<li> ACM UIST 2017 – student volunteer co-chair </li>
+			<li> ACM UIST 2016 – documentation chair </li>
+		</ul>
+	</div>
+</div>
+
+
+
+<!-- ################################################ -->
+<h2 id="talks">Invited talks</h2>
+	<ol class="reversed" reversed>
+		<li> University of Konstanz, hosted by Tiare Feuchtner & Harald Reiterer. July 6, 2023. </li>
+		<li> Austrian CS Day, hosted by IST Austria. June 21, 2022. </li>
+		<li> University of Washington, Computational Fabrication, hosted by Adriana Schulz, Jeff Lipton. April 13, 2022. </li>
+		<li> Stony Brook University, Civil Engineering Seminar, hosted by Paolo Celli. November 15, 2021. </li>
+		<li> Tsinghua University, Access Computing Summer Program, hosted by Yukang Yan. August 10, 2021. </li>
+		<li> MIT Summer Geometry Institute, hosted by Justin Solomon. August 3, 2021. </li>
+		<li> Stanford HCI Seminar. May 28, 2021. </li>
+		<li> Toronto Geometry Colloquium. March 31, 20201. </li>
+		<li> CMU Mechanics Seminar, hosted by Kaushik Dayal. October 2, 2020. </li>
+		<li> University of Toronto, hosted by Tovi Grossman. March 26, 2020. </li>
+		<li> Carnegie Mellon University, hosted by Scott Hudson. March 23, 2020. </li>
+		<li> Boston University MechE, hosted by Alice White. March 17, 2020. </li>
+		<li> Boston University CS, hosted by Emily Whiting. March 16, 2020. </li>
+		<li> University of Chicago, hosted by Blase Ur. March 12, 2020. </li>
+		<li> Aalto University, hosted by Elisa Mekler, Antti Oulasvirta. March 5, 2020. </li>
+		<li> IST Austria, hosted by Bernd Bickel. March 2, 2020. </li>
+		<li> Cornell University, hosted by Cheng Zhang, François Guimbretière. February 26, 2020. </li>
+		<li> TU Delft CS, hosted by Elmar Eisemann. Februray 7, 2020. </li>
+		<li> TU Delft PME, hosted by Just Herder. Februray 4, 2020. </li>
+		<li> Aalto University, hosted by Antti Oulasvirta. December 17, 2019. </li>
+		<li> University of Copenhagen. December 16, 2019. </li>
+		<li> TU Delft, hosted by Just Herder. November 14, 2019. </li>
+		<li> University of Chicago, hosted by Pedro Lopes. October 29, 2019. </li>
+		<li> University of Stuttgart, hosted by Achim Menges. September 16, 2019. </li>
+		<li> Google (Mountain View), hosted by Alex Olwal. August 9, 2019. </li>
+		<li> UC Berkeley, hosted by Björn Hartmann. August 8, 2019. </li>
+		<li> Stanford, hosted by Sean Follmer. August 7, 2019. </li>
+		<li> UCLA, hosted by Ankur Mehta. August 2, 2019. </li>
+		<li> MIT Media Lab, hosted by Hiroshi Ishii. June 19, 2019. </li>
+		<li> MIT CSAIL, hosted by Stefanie Mueller. June 19, 2019. </li>
+		<li> ETH Zurich, PhD Seminar. October 26, 2018.  </li>
+		<li> University of Sussex, hosted by Diego Martínez & Sriram Subramanian. May 21, 2018. </li>
+		<li> Université de Montréal, hosted by Bernhard Thomaszewski. April 27, 2018. </li>
+		<li> IST Austria, hosted by Bernd Bickel. March 2, 2018. </li>
+		<li> ETH Zürich, hosted by Olga Sorkine-Hornung. December 14, 2017. </li>
+		<li> SAP Walldorf, hosted by Andreas Polze & Bernd Welz. December 11, 2017. </li>
+		<li> TU Delft, hosted by Jouke Verlinden. December 4, 2017. </li>
+		<li> Aarhus University, hosted by Roman Rädle. October 5, 2017. </li>
+		<li> Technomania, hosted by The Danish Society of Engineers IDA. October 4, 2017.  </li>
+		<li> Driving 3D, hosted by The Danish Society of Engineers, IDA. September 29, 2017. </li>
+		<li> TEDx Poznan. April 8, 2017. </li>
+		<li> Singularity University Copenhagen, hosted by Märtha Rehnberg. December 14, 2016. </li>
+		<li> TU Berlin, hosted by Marc Alexa. 2016. </li>
+		<li> TU Berlin, hosted by Marc Alexa. 2015. </li>
+	</ol>
+
+
+<!-- ################################################ -->
+<h2 id="honors">Awards &amp; Honors</h2>
+
+<h3>Academic</h3>
+	<ol class="reversed" reversed>
+		<li> Best paper award. ACM PACM (ISS’23). </li>
+		<li> Best demo award. ACM UIST 2023. </li>
+		<li> Received the Sara Kiesler Junior Development Chair at CMU HCII for 2023-2024 </li>
+		<li> Selected for Rising Stars in EECS 2019. </li>
+		<li> Best visual communication award for TrussFormer. ACM CHI 2019 Video Showcase.  </li>
+		<li> Scholarship for academic exchange (2018 DAAD FIT program, ~9 000 EUR).   </li>
+		<li> My CHI 2015 talk is the example for a good presentation on the CHI conference website, 2016 – present.  </li> 
+		<li> <strong>Best paper honorable mention</strong> award. ACM UIST 2016.  </li>
+		<li> <strong>Best paper honorable mention</strong> award. ACM CHI 2013.   </li>
+		<li> Nominated for national best master’s thesis award. 2012.  </li>
+	</ol>
+
+
+<h3>INDUSTRY/ART/DESIGN</h3>
+	<ol class="reversed" reversed>
+		<li> Fast Company’s Innovation by Design Award (Honorable Mention) 2018, for Adding Force Feedback to MR. </li>
+		<li> VIDA. Incentive Award 2016, for Ad Infinitum. </li>
+		<li> Bronze Cyber Lion, Cannes Lions 2010, for “Last call” (interactive movie). </li>
+		<li> Bronze Media Lion, Cannes Lions 2010, for “Last call” (interactive movie). </li>
+		<li> Bronze "Digital Media Craft", ADC Germany 2010, Art directors club, for “Last call” (interactive movie). </li>
+	</ol>
+
+
+<!-- ################################################ -->
+<h2 id="exhibitions">Invited Exhibitions</h2>
+
+<h3>METAMATERIAL DEVICES</h3>
+	<ul class="no_bullet">
+		<li> Ars Electronica Center, Linz, Austria. 2019 – 2021.  </li>
+		<li> BMBF (german federal ministry for education and research) InnoTruck (travelling exhibition). 2017 – 2020.  </li>
+		<li> UNIVERSUM Mexico City, “3D, printing the world”. September 2019 – February 2020. </li>
+		<li> Espacio Fundación Telefónica Chile, Santiago, “3D, printing the world”. March 2019 – July 2019. </li>
+		<li> Espacio Fundación Telefónica Argentina, Buenos Aires, “3D, printing the world”. July 2018 – October 2018. </li>
+		<li> Espacio Fundación Telefónica Peru, Lima, “3D, printing the world”. December 2017 – April 2018. </li>
+		<li> Espacio Fundación Telefónica Spain, Madrid, “3D, printing the world”. June – September 2017. </li>
+		<li> CeBit 2017. Futurium booth (Berlin-based museum for ideas of the future). March 20 – 24, 2017. </li>
+	</ul>
+
+
+<h3><a href="http://a-parasite.org/" class="muted_link">AD INFINITUM</a></h3>
+	<ul class="no_bullet">
+		<li> Przemiany Festival, Copernicus Science Center Warsaw. September 13-16, 2018. </li>
+		<li> World Economic Forum, San Francisco. December 2017 – May 2018. </li>
+		<li> Ars Electronica Festival, Linz, Austria. 7-11 September 2017. </li>
+		<li> Science Gallery Dublin, Ireland, “Humans need not apply”. February – May 2017. </li>
+		<li> Natural History Museum Bern, Switzerland. September 9, 2016. </li>
+	</ul>
+
+<!-- TODO add calendar -->
+
+<!-- abstract & bio -->
+
+<!-- (education?) -->

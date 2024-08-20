@@ -1,0 +1,41 @@
+Personal website:
+
+about text
+	lab website
+	publications link (lab, gscholar)
+	CV
+	
+contact
+	address
+	social media
+	
+service
+
+talks
+
+awards
+
+outreach
+
+teaching
+
+abstract & bio
+
+calendar
+
+
+(education?)
+
+
+
+
+CV:
+---
+gdoc normal:
+https://docs.google.com/document/d/17mML2rdbHIYjW1cs71TRwHvUuq6Ly0JGXlwMy01CiWo/edit?usp=sharing
+
+view as PDF in browser:
+https://docs.google.com/viewer?url=https://docs.google.com/document/d/17mML2rdbHIYjW1cs71TRwHvUuq6Ly0JGXlwMy01CiWo/export?format=pdf
+
+download as PDF:
+https://docs.google.com/document/d/17mML2rdbHIYjW1cs71TRwHvUuq6Ly0JGXlwMy01CiWo/export?format=pdf

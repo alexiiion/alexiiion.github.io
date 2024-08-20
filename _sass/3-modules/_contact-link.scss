@@ -1,0 +1,25 @@
+.contact {
+  .contact__list {
+    li {
+      margin-left: 15px;
+      // display: inline-block;
+      
+      a {
+        ion-icon {
+          margin-right: 5px;
+          vertical-align: middle;
+          padding-bottom: 3px;
+        }
+
+        // color: $dark;
+        color: $black;
+        border: none;
+        &:hover {
+          // color: $link-color;
+          border-bottom: solid 1px $black;
+        }
+        
+      }
+    }
+  }
+}

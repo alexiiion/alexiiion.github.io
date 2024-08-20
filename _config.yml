@@ -1,0 +1,36 @@
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+assetsurl: /assets/
+
+#-------------------------------
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll/tagging
+#   - jekyll-paginate
+
+gems:
+  - jekyll-email-protect
+
+# paginate: 5
+# paginate_path: "/page/:num"
+
+# # Pages Path
+# defaults:
+#   - scope:
+#       path: '_pages'
+#     values:
+#       permalink: /:basename:output_ext
+
+# include:
+#   - _pages
+
+collections:
+  publications:
+    output: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
