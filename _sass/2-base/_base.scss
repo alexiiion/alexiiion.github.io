@@ -87,7 +87,8 @@ p.centered {
 }
 
 .highlight_text {
-  background-color: lighten($brand-color, 20%);
+  // background-color: lighten($brand-color, 20%);
+  background-color: $brand-color;
   padding: 1px 10px;
   font-weight: 400;
 }

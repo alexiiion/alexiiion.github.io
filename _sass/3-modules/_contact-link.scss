@@ -3,6 +3,9 @@
     li {
       margin-left: 15px;
       // display: inline-block;
+      // color: $dark;
+      color: $black;
+      border: none;
       
       a {
         ion-icon {
@@ -11,9 +14,6 @@
           padding-bottom: 3px;
         }
 
-        // color: $dark;
-        color: $black;
-        border: none;
         &:hover {
           // color: $link-color;
           border-bottom: solid 1px $black;
